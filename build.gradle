@@ -10,10 +10,14 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.4"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
-        implementation "de.robv.android.xposed:api:82"
-        implementation "com.github.idanatz:OneAdapter:2.1.1"
-        implementation "com.scwang.smart:refresh-layout-kernel:2.0.3"
-        implementation "com.scwang.smart:refresh-header-material:2.0.3"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 
